@@ -1,0 +1,30 @@
+<%- contentFor('body') %>
+
+<h1 class="mb-4">
+  <small>Produtos Recentes</small>
+</h1>
+
+<hr />
+
+<% produtos.forEach(function (produto) { %>
+
+<div class="card mb-4">
+  <img
+    class="card-img-top"
+    src="<%=produto.foto%>"
+    alt="Imagem de capa do card"
+  />
+
+  <div class="card-body">
+    <h5 class="card-title"><%=produto.nome%></h5>
+    <p class="card-text">
+      <%-produto.descricao.substr(0,200)%>...
+    </p>
+    <a href="/produto/<%=produto.id%>" class="btn btn-primary">Leia mais</a>
+  </div>
+  <div class="card-footer text-muted">
+    Postado por <a href="#"><%=produto.Usuario.email%></a> <%=produto.postadoEm%>
+  </div>
+</div>
+
+<% }) %>

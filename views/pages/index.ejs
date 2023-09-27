@@ -1,0 +1,11 @@
+<%- contentFor('body') %>
+<h1>Cursos</h1>
+        <ul>
+        <%  cursos.forEach( function (curso) { %>
+
+                <% if (curso.ch > 300) { %>
+                        <li><%=curso.nome%> (<%=curso.ch%>)</li>
+                <% } else { %>
+                        <li><%=curso.nome%> (<b><%=curso.ch%></b>)</li>
+        <% }})  %>
+</ul>

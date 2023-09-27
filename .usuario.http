@@ -1,0 +1,34 @@
+###
+
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/api/usuarios
+
+###
+
+POST http://localhost:8080/api/usuarios/
+Content-Type: application/json
+
+{
+    "nome": "Tinta",
+    "descricao": "Amarela",
+    "preco": 70,
+    "userId": 3
+}
+
+###
+
+PUT http://localhost:8080/api/usuarios?id=15898ce2-d7f9-492f-a4f4-2c56aeb571a3
+Content-Type: application/json
+
+{
+    "nome": "Camisa",
+    "descricao": "Vermelha",
+    "preco": 40,
+    "userId": 4
+}
+
+###
+DELETE http://localhost:8080/api/usuarios?id=9aa0d7a6-a9e6-44e7-9ebc-0cdfe81767a8
